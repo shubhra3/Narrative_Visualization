@@ -1,0 +1,183 @@
+<html>
+    <head>
+        <title>World Development Indicators - Narrative Visualization </title>
+        <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+        <link href="d3.css" rel="stylesheet" type="text/css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://rawgithub.com/Caged/d3-tip/master/examples/example-styles.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    </head>
+
+<body>
+    <div class="alert alert-danger" id="showAlert">
+        <a href="#" style="color:gray; text-decoration:none;" class="close" aria-label="close" id="closeAlert">×&emsp;</a>
+        Error: the data for the selected country does not exist.
+    </div>
+
+    <div id="Scene1" class="container-fluid" style="height:250px">
+        <p>
+            <div style="clear: both; padding-bottom:40px;">
+                <h2 style="float: left; padding-left:15px">
+                    Access to Water, Sanitation, and Electricity &emsp;&emsp;&emsp;
+                    <span id="sceneTitle">
+                        <b>&emsp;WORLD (WLD)&emsp;</b>
+                    </span>
+                </h2>
+                <h4 style="float:right; padding: 8 16 0 0;"><div id="toScene2"><a href="#">Next Scene ></a></div></h4>
+            </div>
+            <hr>
+            <div class="container-fluid" style="height:50px">
+                <p>This scene shows the trends of worldwide (WLD) access to <span style="color:royalblue;">water</span>, <span style="color:crimson;">sanitation</span>, and <span style="color:forestgreen;">electricity</span>, both urban and rural, as percents of their respective populations, from 2000 to 2019. The line chart clearly displays favorable upward trends across all metrics, as we can clearly see that the percentage of worldwide access to water, sanitation, and electricity has been increasing, in both rural and urban populations. As such, even despite the periods of economic turmoil around the world, infrastructure has developed significantly, allowing more people around the world reliable access to their basic needs. </p>
+            </div>
+        </p>
+    </div>
+
+    <div id="Scene2" class="container-fluid" style="display:none;height:250px">
+        <div>
+            <p>
+                <div style="clear: both; padding-bottom:40px;">
+                    <h2 style="float: left; padding-left:15px">
+                        Access to Water, Sanitation, and Electricity &emsp;&emsp;&emsp;
+                        <span id="sceneTitle">
+                            <b>&nbsp;&nbsp;&nbsp;CANADA (CAN)&nbsp;&nbsp;&nbsp;</b>
+                        </span>
+                    </h2>
+                    <h4 style="float:right; padding: 8 16 0 0;"><div id="toScene3"><a href="#">Next Scene ></a></div></h4>
+                </div>
+                <hr>
+                <div class="container-fluid" style="height:50px">
+                    <p>This scene shows the trends of access in Canada (CAN) to <span style="color:royalblue;">water</span>, <span style="color:crimson;">sanitation</span>, and <span style="color:forestgreen;">electricity</span>, both urban and rural, as percents of their respective populations, from 2000 to 2019. The line chart displays stagnant yet favorable trends across all metrics, as we can clearly see that the percentage of people's access to water, sanitation, and electricity has remained high, in both rural and urban populations. This seems intuitive, seeing as Canada is a wealthy and well-developed nation. Despite short periods of economic turmoil, infrastructure has remained strong throughout the country, and nearly all people in Canada have reliable access to their basic needs. </p>
+                </div>
+            </p>
+        </div>
+    </div>
+
+    <div id="Scene3" class="container-fluid" style="display:none;height:250px">
+        <div>
+            <p>
+                <div style="clear: both; padding-bottom:40px;">
+                    <h2 style="float: left; padding-left:15px">
+                        Access to Water, Sanitation, and Electricity &emsp;&emsp;&emsp;
+                        <span id="sceneTitle">
+                            <b>&emsp;CHINA (CHN)&emsp;</b>
+                        </span>
+                    </h2>
+                    <h4 style="float:right; padding: 8 16 0 0;"><div id="toScene4"><a href="#">Next Scene ></a></div></h4>
+                </div>
+                <hr>
+                <div class="container-fluid" style="height:50px">
+                    <p>This scene shows the trends of access in China (CHN) to <span style="color:royalblue;">water</span>, <span style="color:crimson;">sanitation</span>, and <span style="color:forestgreen;">electricity</span>, both urban and rural, as percents of their respective populations, from 2000 to 2019. The line chart displays favorable upward trends, especially in terms of their formerly low-performing metrics. As we can clearly see, the percentage of people's access to water, sanitation, and electricity has remained high in urban populations. Access to sanitation improved in both rural and urban populations. While access to electricity was relatively ubiquitous in rural populations, access to clean water significantly increased during this time period. This seems reasonable, seeing as China is a rapidly developing nation, and increasing investments in infrastructure have helped to improve reliable access to basic needs for all.</p>
+                </div>
+            </p>
+        </div>
+    </div>
+
+    <div id="Scene4" class="container-fluid" style="display:none;height:250px">
+        <div>
+            <p>
+                <div style="clear: both; padding-bottom:40px;">
+                    <h2 style="float: left; padding-left:15px">
+                        Access to Water, Sanitation, and Electricity &emsp;&emsp;&emsp;
+                        <span id="sceneTitle">
+                            <b>&emsp;INDIA (IND)&emsp;</b>
+                        </span>
+                    </h2>
+                    <h4 style="float:right; padding: 8 16 0 0;"><div id="toScene5"><a href="#">Next Scene ></a></div></h4>
+                </div>
+                <hr>
+                <div class="container-fluid" style="height:50px">
+                    <p>This scene shows the trends of access in India (IND) to <span style="color:royalblue;">water</span>, <span style="color:crimson;">sanitation</span>, and <span style="color:forestgreen;">electricity</span>, both urban and rural, as percents of their respective populations, from 2000 to 2019. The line chart displays a strongly favorable upward trends across all metrics. While urban access to clean water and electricity remained relatively high, all of the other metrics could be considered low-performing in the earlier years. Access to sanitation drastically improved across the country, across both rural and urban populations. Access to clean water and electricity also significantly improved for rural populations. Chart shows India suffers over 11% power generation loss in 2011-12. India is a rapidly developing nation, where sanitation-related government initiatives and increasing investments in infrastructure have helped to improve reliable access to basic needs for all.</p>
+                </div>
+            </p>
+        </div>
+    </div>
+
+    <div id="Scene5" class="container-fluid" style="display:none;height:250px">
+        <div>
+            <p>
+                <div style="clear: both; padding-bottom:40px;">
+                    <h2 style="float: left; padding-left:15px">
+                        Access to Water, Sanitation, and Electricity &emsp;&emsp;&emsp;
+                        <span id="sceneTitle">
+                            <b>&emsp;NIGERIA (NGA)&emsp;</b>
+                        </span>
+                    </h2>
+                    <h4 style="float:right; padding: 8 16 0 0;"><div id="toScene6"><a href="#">Next Scene ></a></div></h4>
+                </div>
+                <hr>
+                <div class="container-fluid" style="height:50px">
+                    <p>This scene shows the trends of access in Nigeria (NGA) to <span style="color:royalblue;">water</span>, <span style="color:crimson;">sanitation</span>, and <span style="color:forestgreen;">electricity</span>, both urban and rural, as percents of their respective populations, from 2000 to 2019. The line chart displays upward trends across all metrics. While urban access to clean water and electricity was moderately high, all of the other metrics are low-performing. While access to sanitation did improve in both rural and urban populations, access is much lower in comparison to rest of the world. Access to clean water and electricity improved in rural populations, but these metrics remain concerningly low. Nigeria sufferd massive power outage as several plants breakdown. Chart shows data unavailibity in electricity from 2017. Nigeria is an impoverished nation, so although government initiatives and outside investments in infrastructure have helped slightly, the country is still in much need of improvement to provide their people reliable access to basic needs.</p>
+                </div>
+            </p>
+        </div>
+    </div>
+
+    <div id="Scene6" class="container-fluid" style="display:none;height:250px">
+        <div>
+            <p>
+                <div style="clear: both; padding-bottom:40px;">
+                    <h2 style="float: left; padding-left:15px">
+                        Access to Water, Sanitation, and Electricity &emsp;&emsp;&emsp;
+                        <span id="sceneTitle">
+                            <b>&emsp;INTERACTIVE&emsp;</b>
+                        </span>
+                    </h2>
+                    <h4 style="float:right; padding: 8 16 0 0;"><div id="startOver"><a href="#">Start Over ></a></div></h4>
+                </div>
+                <hr>
+                <div class="container-fluid" style="height:30px">
+                    <p>This interative scene allows you to investigate trends in access to <span style="color:royalblue;">water</span>, <span style="color:crimson;">sanitation</span>, and <span style="color:forestgreen;">electricity</span> for countries you are curious about! The lines already present on the chart serve as the worldwide baseline to compare against.</p>
+                </div>
+            </p>
+        </div>
+        <div style="padding:15px;">
+            Access to Electricity - Urban &nbsp; <input type="radio" name="type" value="0" checked/> 
+            &emsp;Access to Sanitation - Urban &nbsp; <input type="radio" name="type" value="2"/> 
+            &emsp;Access to Clean Water - Urban &nbsp; <input type="radio" name="type" value="4"/> <br>
+            Access to Electricity - Rural &nbsp;&nbsp;&nbsp; <input type="radio" name="type" value="1"/> 
+            &emsp;Access to Sanitation - Rural &nbsp;&nbsp; <input type="radio" name="type" value="3"/> 
+            &emsp;Access to Clean Water - Rural &nbsp;&nbsp; <input type="radio" name="type" value="5"/> 
+            <div id="select_country"></div> <hr>
+            <p><div style="padding-top:30px;" id="clearGraph"><a href="#">Clear Graph</a></div></p>
+        </div>  
+    </div>
+    
+    <div class="content">
+        <svg id="chart"></svg>
+    </div>
+    
+    <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.min.js"></script>
+    <script src="load.js" charset="utf-8"></script>
+    <script>
+        draw('WLD', false, 0);
+        draw('WLD', false, 1);
+        draw('WLD', false, 2);
+        draw('WLD', false, 3);
+        draw('WLD', false, 4);
+        draw('WLD', false, 5);
+    </script>
+
+<div style="padding-top:100px;"class="container-fluid">
+    <h5>Note:</h5>
+    <div>
+        The data used for all charts in this visualization is sourced in real-time from the World Bank Development Indicators (WDI) Dataset using the organization's APIs. No pre-loaded data files (.csv, .xlsx, etc.) are used, and D3.js is the data visualization tool used for this interactive Sceneshow. The indicators of access to electricity for urban and rural populations (denoted in the dataset as <span style="color:forestgreen;">EG.ELC.ACCS.UR.ZS</span> and <span style="color:limegreen;">EG.ELC.ACCS.RU.ZS</span>, respectively) measure the proportion of people with reliable access to electricity, as a percentage of total aggregated population of the urban or rual areas within the queried country/region. Similarly, the indicators of access to sanitation  for urban and rural populations (denoted in the  dataset as <span style="color:crimson;">SH.STA.BASS.UR.ZS</span>  and <span style="color:coral;">SH.STA.BASS.RU.ZS</span>, respectively) measure the proportion of people with reliable access to sanitation. Finally, the indicators of access to clean water for urban and rural populations (denoted in the WDI dataset as <span style="color:royalblue;">SH.H2O.BASW.UR.ZS</span> and <span style="color:skyblue;">SH.H2O.BASW.UR.ZS</span>, respectively) measure the proportion of people with reliable access to clean water, as percentages of total aggregated populations of the urban or rual areas within queried country/region. <br><br>
+
+        <div style="border: solid; border-width: 1px; background-color: ghostwhite; padding:10px;">
+            <b><span style="color:forestgreen;">–––</span></b> Access to electricity (% of urban population) &emsp;
+            <b><span style="color:crimson;">–––</span></b> Access to sanitation (% of urban population) &emsp;
+            <b><span style="color:royalblue;">–––</span></b> Access to water (% of urban population) <br>
+            <b><span style="color:limegreen;">–––</span></b> Access to electricity (% of rural population) &emsp;&nbsp;&nbsp;
+            <b><span style="color:coral;">–––</span></b> Access to sanitation (% of rural population) &emsp;&nbsp;&nbsp;
+            <b><span style="color:skyblue;">–––</span></b> Access to water (% of rural population)
+        </div>
+    </div>
+    <blockquote>
+            
+    </blockquote>
+</div>
+
+</body>
+
+</html>
