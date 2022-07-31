@@ -9,4 +9,4 @@
 ## About This Visualiztion
 
 ### Live Demo: 
-https://shubhra3.github.io/CS416_Narrative_Visualization
+https://shubhra3.github.io/Narrative_Visualization
