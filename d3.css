@@ -1,0 +1,61 @@
+.overlay {
+    fill: none;
+    pointer-events: all;
+}
+
+.content {
+    border: solid;
+    border-width: 1px;
+    max-width: 800px;
+    margin: auto;
+    background-color: ghostwhite;
+}
+
+#sceneTitle {
+    border: solid; 
+    border-width: 1px;
+    padding: 2px;
+    font-size: 24; 
+    background-color: ghostwhite;
+}
+
+.line {
+    fill: none;
+    stroke: darkgray;
+    stroke-width: 2px;
+}
+
+path { 
+    stroke: #000;
+    stroke-width: 2;
+    fill: none;
+}
+
+.dot {
+    stroke: #000;
+    stroke-width: 1.5;
+    fill: none;
+}
+
+.ticks path {
+    stroke: lightgray;
+    opacity: 0.3
+} 
+
+.focus circle {
+    fill: none;
+    fill: darkgray;
+}
+
+.focus text {
+    font-size: 16px;
+}
+
+.tooltip {
+    fill: white;
+    stroke: #000;
+}
+
+.tooltip-date, .tooltip-likes {
+    font-weight: bold;
+}
